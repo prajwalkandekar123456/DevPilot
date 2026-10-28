@@ -2,8 +2,6 @@ package devPilot.backend.entity;
 import java.time.Instant;
 import java.util.UUID;
 
-import com.openai.models.beta.responses.BetaResponseItem.AgentMessage.Content.Text;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,7 +22,7 @@ import lombok.Setter;
 @AllArgsConstructor 
 @Table(name="users")
 @Builder 
-class User{
+public class User{
     @Id 
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
